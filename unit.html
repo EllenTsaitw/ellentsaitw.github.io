@@ -455,11 +455,18 @@
 
         // Generate images array for current unit
         function generateImages() {
+            // 取得目前單元的資料
             const unit = unitInfo[currentUnit];
-            if (unit === 20 ) {
-                jpg_count = 4
-            } else { jpg_count = 3 
-                   };
+
+            // 根據單元編號決定圖片數量
+            let jpg_count;
+            if (currentUnit === 20) { 
+                jpg_count = 4;
+            } else { 
+                    jpg_count = 3;
+            }
+
+            // 初始化圖片陣列
             images = [];
             for (let i = 1; i <= jpg_count; i++) {
                 const imageData = {
